@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cibaeño Tours - Únete a la Familia</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+        .loading {
+            text-align: center;
+            padding: 50px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .loading h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .loading a {
+            color: white;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            font-weight: bold;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+        }
+        .browser-notice {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="loading" id="loading">
+        <h2>🌟 Cibaeño Tours 🌟</h2>
+        <p>Cargando formulario de registro...</p>
+        
+        <div class="browser-notice">
+            <p>¿Problemas para ver el formulario?</p>
+            <p>Abre en tu navegador (Safari/Chrome) para mejor experiencia</p>
+        </div>
+        
+        <a href="YOUR_GOOGLE_APPS_SCRIPT_URL_HERE" target="_blank">
+            Abrir Formulario Directamente
+        </a>
+    </div>
+    
+    <iframe 
+        id="formFrame" 
+        src="https://script.google.com/macros/s/AKfycby6itclgHSPci6Jxw7L1NOVPqsocw2nb5xPgvR2bRbpP3504S4Q1fzhRDL8dWOObSb9/exec "
+        onload="document.getElementById('loading').style.display='none'; this.style.display='block';">
+    </iframe>
+</body>
+</html>
